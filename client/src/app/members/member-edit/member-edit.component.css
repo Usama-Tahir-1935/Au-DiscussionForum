@@ -1,15 +1,267 @@
-.img-thumbnail {
-    margin: 25px;
-    width: 85%;
-    height: 85%;
+/* ✅ General Profile Page Styling */
+.profile-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 30px;
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    color: #ddd;
+    border-radius: 12px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.4);
 }
 
-.card-body {
-    padding: 0 25px;
+/* ✅ Profile Title */
+h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #fbc531;
+    text-shadow: 2px 2px 5px rgba(255, 204, 0, 0.4);
+    margin-bottom: 20px;
+    text-align: center;
 }
 
-.card-footer {
+/* ✅ Profile Card */
+.card {
+    background: linear-gradient(135deg, #2a2a2a, #202020);
+    border-radius: 12px;
+    box-shadow: 0px 6px 12px rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.03);
+    box-shadow: 0px 8px 16px rgba(255, 255, 255, 0.15);
+}
+
+/* ✅ Profile Image */
+.card-img-top {
+    width: 100%;
+    border-bottom: 3px solid #fbc531;
+    border-radius: 12px 12px 0 0;
+}
+
+/* ✅ Profile Info */
+.card-body div {
     padding: 10px 15px;
-    background-color: #fff;
-    border-top: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 16px;
+}
+
+.card-body strong {
+    color: #fbc531;
+}
+
+/* ✅ Save Button */
+.btn-success {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    background: linear-gradient(90deg, #27ae60, #1e8449);
+    color: white;
+    border-radius: 8px;
+    border: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-success:hover {
+    background: linear-gradient(90deg, #1e8449, #27ae60);
+    box-shadow: 0px 4px 10px rgba(39, 174, 96, 0.5);
+    transform: scale(1.02);
+}
+
+/* ✅ Alert Styling */
+.alert-info {
+    background: rgba(255, 255, 0, 0.1);
+    border-left: 4px solid #fbc531;
+    color: #fbc531;
+    padding: 12px;
+    font-size: 14px;
+    border-radius: 6px;
+}
+
+/* ✅ Form Section Headings */
+h4 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fbc531;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 4px rgba(255, 204, 0, 0.5);
+}
+
+/* ✅ Textarea Styling */
+textarea {
+    background: #2a2a2a;
+    color: #ddd;
+    border: 2px solid #555;
+    border-radius: 6px;
+    padding: 12px;
+    font-size: 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+textarea:focus {
+    border-color: #fbc531;
+    box-shadow: 0px 0px 10px rgba(255, 204, 0, 0.6);
+    transform: scale(1.02);
+}
+
+/* ✅ Location Inputs */
+.d-flex {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+/* ✅ Labels */
+label {
+    font-weight: bold;
+    color: #fbc531;
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+
+/* ✅ Input Fields */
+input {
+    background: #2a2a2a;
+    color: #ddd;
+    border: 2px solid #555;
+    border-radius: 6px;
+    padding: 10px;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+input:focus {
+    border-color: #fbc531;
+    box-shadow: 0px 0px 8px rgba(255, 204, 0, 0.6);
+    transform: scale(1.02);
+}
+
+/* ✅ Tabset Styling */
+.member-tabset {
+    margin-top: 20px;
+    background: linear-gradient(135deg, #222, #161616);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.1);
+}
+
+/* ✅ Tabs Styling */
+.tab {
+    padding: 15px;
+    background: #2a2a2a;
+    border-radius: 10px;
+    box-shadow: 0px 3px 6px rgba(255, 255, 255, 0.1);
+}
+
+/* ✅ Button Hover Effects */
+button {
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 992px) {
+    .profile-container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .card-body div {
+        font-size: 14px;
+    }
+
+    textarea,
+    input {
+        font-size: 14px;
+    }
+
+    .btn-success {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+/* ✅ Background Overlay to Focus Attention */
+.alert-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1050; /* Ensures it appears on top */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+/* ✅ Centered Pop-up Box */
+.alert-info {
+    background: #222; /* Dark, professional look */
+    color: #fff;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 10px;
+    text-align: center;
+    width: 450px;
+    box-shadow: 0px 8px 20px rgba(255, 204, 0, 0.3);
+    border-top: 5px solid #fbc531; /* Golden top border for a premium look */
+    transform: scale(0.8);
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+}
+
+/* ✅ Show the Pop-up Effect */
+.alert-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.alert-info.active {
+    transform: scale(1); /* Smooth pop-up animation */
+}
+
+/* ✅ Warning Icon Styling */
+.alert-info::before {
+    content: "⚠️ ";
+    font-size: 22px;
+}
+
+/* ✅ Close Button */
+.close-alert {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close-alert:hover {
+    color: #ff4757; /* Red color on hover */
+}
+
+/* ✅ Responsive Adjustments */
+@media (max-width: 600px) {
+    .alert-info {
+        width: 90%;
+        font-size: 16px;
+        padding: 15px;
+    }
 }

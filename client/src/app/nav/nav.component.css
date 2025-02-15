@@ -1,9 +1,137 @@
-.dropdown-toggle, .dropdown-item {
-    cursor: pointer;
+/* ✅ Navbar Styling */
+.navbar {
+    padding: 12px 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
 }
 
-img {
-    max-height: 50px;
-    border: 2px solid white;
-    display: inline;
+/* ✅ Navbar Brand */
+.navbar-brand {
+    font-size: 22px;
+    font-weight: bold;
+    color: #fbc531 !important;
+    text-shadow: 1px 1px 4px rgba(255, 204, 0, 0.5);
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-brand:hover {
+    color: #ffd700 !important;
+}
+
+/* ✅ Navbar Links */
+.navbar-nav .nav-link {
+    font-size: 16px;
+    color: #ddd !important;
+    transition: all 0.3s ease-in-out;
+    padding: 10px 15px;
+    border-radius: 6px;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #fbc531 !important;
+    background: rgba(255, 204, 0, 0.15);
+    box-shadow: 0px 2px 8px rgba(255, 204, 0, 0.2);
+}
+
+/* ✅ Dropdown Menu */
+.dropdown {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.dropdown-toggle {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ddd;
+    transition: color 0.3s ease-in-out;
+}
+
+.dropdown-toggle:hover {
+    color: #fbc531;
+}
+
+.dropdown img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #fbc531;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.dropdown:hover img {
+    transform: scale(1.1);
+}
+
+.dropdown-menu {
+    background: #222;
+    border-radius: 8px;
+    box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.dropdown-item {
+    color: #ddd !important;
+    font-size: 15px;
+    padding: 10px;
+    transition: background 0.3s ease-in-out;
+}
+
+.dropdown-item:hover {
+    background: rgba(255, 204, 0, 0.15);
+    color: #fbc531 !important;
+}
+
+/* ✅ Login Form */
+form.d-flex {
+    gap: 10px;
+    align-items: center;
+}
+
+.form-control {
+    background: #2a2a2a;
+    color: #ddd;
+    border: 1px solid #555;
+    border-radius: 6px;
+    padding: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.form-control:focus {
+    border-color: #fbc531;
+    box-shadow: 0px 0px 8px rgba(255, 204, 0, 0.5);
+}
+
+/* ✅ Login Button */
+.btn-success {
+    background: linear-gradient(90deg, #27ae60, #1e8449);
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-success:hover {
+    background: linear-gradient(90deg, #1e8449, #27ae60);
+    box-shadow: 0px 4px 10px rgba(39, 174, 96, 0.5);
+    transform: scale(1.05);
+}
+
+/* ✅ Responsive Navbar Adjustments */
+@media (max-width: 992px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    .dropdown {
+        margin-top: 10px;
+    }
+
+    .form-control {
+        width: 100%;
+    }
 }
