@@ -1,131 +1,17 @@
-/* ✅ Profile Card Styling */
-.card {
-    background: linear-gradient(135deg, #2a2a2a, #1e1e1e);
-    border-radius: 12px;
-    box-shadow: 0px 6px 15px rgba(255, 255, 255, 0.1);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+.img-thumbnail {
+    margin: 25px;
+    width: 85%;
+    height: 85%;
 }
 
-.card:hover {
-    transform: scale(1.02);
-    box-shadow: 0px 8px 18px rgba(255, 255, 255, 0.15);
+.card-body {
+    padding: 0 25px;
 }
 
-/* ✅ Profile Image */
-.card-img-top {
-    width: 100%;
-    border-bottom: 3px solid #fbc531;
-    border-radius: 12px 12px 0 0;
-}
-
-/* ✅ Profile Info */
-.card-body div {
-    padding: 12px 15px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    font-size: 16px;
-}
-
-.card-body strong {
-    color: #fbc531;
-    font-size: 17px;
-}
-
-/* ✅ Card Footer Buttons */
 .card-footer {
-    background: #222;
-    padding: 12px;
-    border-radius: 0 0 12px 12px;
+    padding: 10px 15px;
+    background-color: #fff;
+    border-top: none;
 }
 
-.btn-group {
-    width: 100%;
-}
-
-.btn {
-    flex: 1;
-    padding: 12px;
-    font-size: 16px;
-    font-weight: bold;
-    border: none;
-    transition: all 0.3s ease-in-out;
-}
-
-.btn-primary {
-    background: linear-gradient(90deg, #3498db, #2980b9);
-    color: white;
-}
-
-.btn-primary:hover {
-    background: linear-gradient(90deg, #2980b9, #3498db);
-    box-shadow: 0px 4px 10px rgba(52, 152, 219, 0.5);
-    transform: scale(1.05);
-}
-
-.btn-success {
-    background: linear-gradient(90deg, #27ae60, #1e8449);
-    color: white;
-}
-
-.btn-success:hover {
-    background: linear-gradient(90deg, #1e8449, #27ae60);
-    box-shadow: 0px 4px 10px rgba(39, 174, 96, 0.5);
-    transform: scale(1.05);
-}
-
-/* ✅ Tabset Styling */
-.member-tabset {
-    margin-top: 20px;
-    background: linear-gradient(135deg, #222, #161616);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.1);
-}
-
-/* ✅ Tabs Styling */
-.tab {
-    padding: 15px;
-    background: #2a2a2a;
-    border-radius: 10px;
-    box-shadow: 0px 3px 6px rgba(255, 255, 255, 0.1);
-}
-
-/* ✅ Gallery Styling */
-.gallery {
-    padding: 15px;
-    background: #2a2a2a;
-    border-radius: 10px;
-    box-shadow: 0px 3px 6px rgba(255, 255, 255, 0.1);
-}
-
-/* ✅ Text Styling */
-h4 {
-    font-size: 18px;
-    font-weight: bold;
-    color: #fbc531;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    text-shadow: 1px 1px 4px rgba(255, 204, 0, 0.5);
-}
-
-/* ✅ Paragraph Styling */
-p {
-    font-size: 16px;
-    color: #ddd;
-    line-height: 1.6;
-}
-
-/* ✅ Responsive Adjustments */
-@media (max-width: 768px) {
-    .row {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .col-4, .col-8 {
-        width: 100%;
-    }
-
-    .card {
-        margin-bottom: 20px;
-    }
-}
+.ngx-gallery { display: inline-block; margin-bottom: 20px;}
