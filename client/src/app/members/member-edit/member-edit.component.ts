@@ -33,13 +33,27 @@ export class MemberEditComponent implements OnInit{
   ngOnInit(): void {
     this.loadMember();
   }
+  
+
+  // loadMember() {
+  //   if (!this.user) return;
+  //   this.memberService.getMember(this.user.username).subscribe({
+  //     next: member => this.member = member
+  //   })
+  // }
 
   loadMember() {
     if (!this.user) return;
     this.memberService.getMember(this.user.username).subscribe({
-      next: member => this.member = member
-    })
+      next: member => {
+        this.member = {
+          ...member,
+          lastActive: member.lastActive ?? new Date().toISOString() // Provide default value
+        };
+      }
+    });
   }
+
 
   updateMember() {
     this.memberService.updateMember(this.editForm?.value).subscribe({

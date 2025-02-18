@@ -7,7 +7,7 @@ public class PagedList<T> : List<T>
     public PagedList(IEnumerable<T> items, int count, int pageNumber, int pageSize)
     {
         CurrentPage = pageNumber;
-        TotalPaged = (int) Math.Ceiling(count / (double) pageSize);
+        TotalPages = (int) Math.Ceiling(count / (double) pageSize);
         PageSize = pageSize;
         TotalCount = count;
         AddRange(items);
@@ -15,7 +15,7 @@ public class PagedList<T> : List<T>
     }
 
     public int CurrentPage { get; }
-    public int TotalPaged { get; }
+    public int TotalPages { get; }
     public int PageSize { get; }
     public int TotalCount { get; }
 

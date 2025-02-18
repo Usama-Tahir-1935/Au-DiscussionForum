@@ -31,7 +31,8 @@
             <select 
                 name="gender"
                 style="width: 100px;"
-                class="form-select ms-1" [(ngModel)]="userParams.gender">
+                class="form-select ms-1" 
+                [(ngModel)]="userParams.gender">
                 <option *ngFor="let gender of genderList" [value]="gender.value">
                     {{gender.display}}
                 </option>

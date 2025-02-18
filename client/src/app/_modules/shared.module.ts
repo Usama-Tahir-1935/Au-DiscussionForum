@@ -24,7 +24,7 @@ import { TimeagoModule } from 'ngx-timeago';
     }),
     FileUploadModule,
     BsDatepickerModule.forRoot(),
-    PaginationModule,
+    PaginationModule.forRoot(),
     ButtonsModule.forRoot(),
     TimeagoModule.forRoot()
   ],

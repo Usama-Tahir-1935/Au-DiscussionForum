@@ -25,15 +25,32 @@ export class MemberDetailComponent implements OnInit{
     this.loadMember();
   }
 
+  // loadMember() {
+  //   var username = this.route.snapshot.paramMap.get('username');
+  //   if (!username) return;
+  //   this.memberService.getMember(username).subscribe({
+  //     next: member => {
+  //       this.member = member
+  //       this.getImages()
+  //     }
+  //   })
+  // }
+
   loadMember() {
     var username = this.route.snapshot.paramMap.get('username');
     if (!username) return;
+  
     this.memberService.getMember(username).subscribe({
       next: member => {
-        this.member = member
-        this.getImages()
-      }
-    })
+        this.member = {
+          ...member,
+          lastActive: member.lastActive ?? new Date().toISOString(), // Ensure default value
+          created: member.created ?? new Date().toISOString(),
+        };
+        this.getImages();
+      },
+      error: err => console.error('Error fetching member:', err) // Log errors
+    });
   }
 
   getImages() {
